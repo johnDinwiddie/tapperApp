@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tapperApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +18,51 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backGroundforTapper" translatesAutoresizingMaskIntoConstraints="NO" id="HCE-dh-NGb">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cooltext165091479462011" translatesAutoresizingMaskIntoConstraints="NO" id="XKJ-iu-xiy">
+                                <rect key="frame" x="64" y="63" width="472" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="XKJ-iu-xiy" secondAttribute="height" multiplier="472:69" id="EzK-cu-weK"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afb-tH-1R7">
+                                <rect key="frame" x="250" y="374" width="101" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="101" id="7ie-ue-yQY"/>
+                                    <constraint firstAttribute="height" constant="101" id="dJr-Tz-kQH"/>
+                                </constraints>
+                                <state key="normal" image="playButton-1"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XKJ-iu-xiy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HM0-r3-VTR"/>
+                            <constraint firstItem="XKJ-iu-xiy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="43" id="Qet-5B-dTJ"/>
+                            <constraint firstItem="HCE-dh-NGb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Qke-ap-UcG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="afb-tH-1R7" secondAttribute="bottom" constant="125" id="Va0-do-Hp2"/>
+                            <constraint firstItem="afb-tH-1R7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZTp-V4-d09"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HCE-dh-NGb" secondAttribute="bottom" id="aSt-0X-lxh"/>
+                            <constraint firstAttribute="trailing" secondItem="HCE-dh-NGb" secondAttribute="trailing" id="ciH-nZ-B13"/>
+                            <constraint firstItem="XKJ-iu-xiy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="44" id="hVS-wb-8H4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XKJ-iu-xiy" secondAttribute="trailing" constant="44" id="ibW-4l-O7h"/>
+                            <constraint firstItem="HCE-dh-NGb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qwg-Ed-1we"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1388" y="149"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="backGroundforTapper" width="1134" height="737"/>
+        <image name="cooltext165091479462011" width="602" height="89"/>
+        <image name="playButton-1" width="300" height="300"/>
+    </resources>
 </document>
