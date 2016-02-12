@@ -6,6 +6,13 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+            <string>HelveticaNeue</string>
+            <string>HelveticaNeue-Bold</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -26,42 +33,106 @@
                                 </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cooltext165091479462011" translatesAutoresizingMaskIntoConstraints="NO" id="XKJ-iu-xiy">
-                                <rect key="frame" x="64" y="63" width="472" height="69"/>
+                                <rect key="frame" x="40" y="63" width="520" height="76"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="XKJ-iu-xiy" secondAttribute="height" multiplier="472:69" id="EzK-cu-weK"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afb-tH-1R7">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afb-tH-1R7" userLabel="playButton">
                                 <rect key="frame" x="250" y="374" width="101" height="101"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="101" id="7ie-ue-yQY"/>
                                     <constraint firstAttribute="height" constant="101" id="dJr-Tz-kQH"/>
                                 </constraints>
                                 <state key="normal" image="playButton-1"/>
+                                <connections>
+                                    <action selector="onPlayButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1dQ-jA-ZhO"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How Many Taps To Win" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y7q-7t-mhW" userLabel="TextBox">
+                                <rect key="frame" x="176" y="315" width="249" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="CKu-yY-lzf"/>
+                                    <constraint firstAttribute="width" constant="249" id="oI5-cs-Nnw"/>
+                                </constraints>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Palmtree" translatesAutoresizingMaskIntoConstraints="NO" id="Phg-ZW-TCB">
+                                <rect key="frame" x="60" y="44" width="448" height="431"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="431" id="Qxx-HZ-Csx"/>
+                                    <constraint firstAttribute="width" constant="448" id="XIA-Ue-TZy"/>
+                                </constraints>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1000 Taps!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77Q-hf-71m" userLabel="1000 Taps! Label">
+                                <rect key="frame" x="100" y="511" width="401" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="401" id="EXI-BF-g9m"/>
+                                    <constraint firstAttribute="height" constant="69" id="jBE-c8-v57"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="36"/>
+                                <color key="textColor" red="0.4516136335" green="0.61424594509999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iVS-J5-4tG" userLabel="coconutButton">
+                                <rect key="frame" x="176" y="91" width="178" height="180"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="178" id="erP-n5-QfF"/>
+                                    <constraint firstAttribute="height" constant="180" id="sfc-Oy-a6D"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <state key="normal" image="coconut"/>
+                                <connections>
+                                    <action selector="onCoconutButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FMS-Zv-eYN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="afb-tH-1R7" firstAttribute="centerX" secondItem="XKJ-iu-xiy" secondAttribute="centerX" id="4Yl-Cf-kKJ"/>
+                            <constraint firstItem="iVS-J5-4tG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="82" id="8LG-ON-8gF"/>
+                            <constraint firstItem="afb-tH-1R7" firstAttribute="centerX" secondItem="y7q-7t-mhW" secondAttribute="centerX" id="8Vm-te-Iif"/>
+                            <constraint firstItem="77Q-hf-71m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AKZ-je-hQI"/>
+                            <constraint firstItem="afb-tH-1R7" firstAttribute="top" secondItem="y7q-7t-mhW" secondAttribute="bottom" constant="24" id="Bza-x8-Ze5"/>
                             <constraint firstItem="XKJ-iu-xiy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HM0-r3-VTR"/>
+                            <constraint firstItem="Phg-ZW-TCB" firstAttribute="centerX" secondItem="HCE-dh-NGb" secondAttribute="centerX" id="Kdi-7k-hiq"/>
+                            <constraint firstItem="Phg-ZW-TCB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="24" id="PpI-u9-7uc"/>
                             <constraint firstItem="XKJ-iu-xiy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="43" id="Qet-5B-dTJ"/>
                             <constraint firstItem="HCE-dh-NGb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Qke-ap-UcG"/>
+                            <constraint firstItem="y7q-7t-mhW" firstAttribute="centerX" secondItem="XKJ-iu-xiy" secondAttribute="centerX" id="Uxx-bs-mZG"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="afb-tH-1R7" secondAttribute="bottom" constant="125" id="Va0-do-Hp2"/>
-                            <constraint firstItem="afb-tH-1R7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZTp-V4-d09"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HCE-dh-NGb" secondAttribute="bottom" id="aSt-0X-lxh"/>
                             <constraint firstAttribute="trailing" secondItem="HCE-dh-NGb" secondAttribute="trailing" id="ciH-nZ-B13"/>
-                            <constraint firstItem="XKJ-iu-xiy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="44" id="hVS-wb-8H4"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="XKJ-iu-xiy" secondAttribute="trailing" constant="44" id="ibW-4l-O7h"/>
+                            <constraint firstItem="XKJ-iu-xiy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="hVS-wb-8H4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XKJ-iu-xiy" secondAttribute="trailing" constant="20" id="ibW-4l-O7h"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="77Q-hf-71m" secondAttribute="bottom" constant="56" id="oM3-wq-zN5"/>
                             <constraint firstItem="HCE-dh-NGb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qwg-Ed-1we"/>
+                            <constraint firstItem="iVS-J5-4tG" firstAttribute="centerX" secondItem="Phg-ZW-TCB" secondAttribute="centerX" id="ysd-ai-jBR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backGroundImage" destination="HCE-dh-NGb" id="lWb-Y7-0Db"/>
+                        <outlet property="coconutButton" destination="iVS-J5-4tG" id="JAL-l5-d4i"/>
+                        <outlet property="coolText" destination="XKJ-iu-xiy" id="0GN-62-RT7"/>
+                        <outlet property="howManyTapsTxt" destination="y7q-7t-mhW" id="RIz-Fl-pCt"/>
+                        <outlet property="palmTreeImg" destination="Phg-ZW-TCB" id="wVp-wN-I7U"/>
+                        <outlet property="playButton" destination="afb-tH-1R7" id="A5S-3k-fmF"/>
+                        <outlet property="tapsLabel" destination="77Q-hf-71m" id="WYZ-z0-LtD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1388" y="149"/>
+            <point key="canvasLocation" x="2489" y="34"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Palmtree" width="222" height="297"/>
         <image name="backGroundforTapper" width="1134" height="737"/>
+        <image name="coconut" width="124" height="180"/>
         <image name="cooltext165091479462011" width="602" height="89"/>
         <image name="playButton-1" width="300" height="300"/>
     </resources>

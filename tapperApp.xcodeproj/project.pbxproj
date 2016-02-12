@@ -257,6 +257,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.criticalEntertainment.tapperApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -271,6 +272,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.criticalEntertainment.tapperApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -293,6 +295,7 @@
 				3A91DF041C6DA8C2001C06F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
